@@ -18,6 +18,11 @@ span {
   font-weight: bold;
 }
 
+.red {
+  margin-top: 30px;
+  color: red;
+}
+
 .span {
   color: #b60303;
 }
@@ -29,6 +34,16 @@ span {
 .right h3:nth-of-type(2),
 .right h3:nth-of-type(3) {
   margin-top: 10px;
+}
+
+form textarea,
+form input {
+  width: 100%;
+}
+
+form input[type=submit] {
+  margin-top: 10px;
+  width: 15%;
 }
 
 @media all and (max-width: 992px) {

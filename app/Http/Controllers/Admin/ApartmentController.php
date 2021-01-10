@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Apartment;
 use Illuminate\Support\Facades\Auth;
+use App\Tag;
 
 class ApartmentController extends Controller
 {
@@ -28,8 +29,10 @@ class ApartmentController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        //
+    {   
+        $tags = Tag::all();
+
+        return view('admin.apartments.create', compact('tags'));
     }
 
     /**
@@ -40,7 +43,8 @@ class ApartmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        dd($data);
     }
 
     /**

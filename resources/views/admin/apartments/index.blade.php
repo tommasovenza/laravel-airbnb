@@ -16,6 +16,17 @@
                         @endif
                     @endforeach
                </ul>
+
+               <h3>La lista di tutti gli altri appartamenti</h3>
+               <ul>
+                    @foreach ($apartments as $apartment)
+                        @if ($user->id != $apartment->user->id)
+                        
+                        <li>{{$apartment->title}}</li>
+                        <a href="{{ route('admin.apartments.show', $apartment)}}" class="btn btn-primary">Dettaglio Annuncio</a>  
+                        @endif
+                    @endforeach
+               </ul>
             </div>
         </div>
     </div>

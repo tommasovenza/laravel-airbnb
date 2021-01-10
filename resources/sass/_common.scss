@@ -12,6 +12,10 @@ ul {
 span {
     font-weight: bold;
 }
+.red {
+    margin-top: 30px;
+    color: red;
+}
 .span {
     color: rgb(182, 3, 3);
 }
@@ -23,6 +27,17 @@ span {
 .right h3:nth-of-type(2),
 .right h3:nth-of-type(3) {
     margin-top: 10px;
+}
+
+form {
+    textarea,
+    input {
+        width: 100%;
+    }
+    input[type="submit"] {
+        margin-top: 10px;
+        width: 15%;
+    }
 }
 
 @media all and (max-width: 992px) {

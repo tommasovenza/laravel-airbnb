@@ -11,10 +11,11 @@ class ApartmentController extends Controller
 
         $apartments = Apartment::all();
 
-        return view('guest.apartments.index', compact('apartments'));
+        return view('guests.apartments.index', compact('apartments'));
     }
 
     public function show(Apartment $apartment) {
-        return view('guest.apartments.show', compact('apartment'));
+
+        return view('guests.apartments.show', ['apartment' => $apartment]);
     }
 }

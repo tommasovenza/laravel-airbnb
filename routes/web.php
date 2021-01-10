@@ -22,9 +22,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // la route che reindirizza agli appartamenti, se non si è utenti loggati
-Route::get('/apartments', 'ApartmentController@index')->name('guest.apartments');
+Route::get('/apartments', 'ApartmentController@index');
 
-Route::get('apartments/{$apartment}', 'ApartmentController@show')->name('guest.aparments');
+Route::get('/apartments/{apartment}', 'ApartmentController@show')->name('guests.apartment.show');
 
 // route per utenti loggati
 Route::prefix('admin')
@@ -32,6 +32,6 @@ Route::prefix('admin')
     ->middleware('auth')
     ->name('admin.')
     ->group(function() {
-        Route::resource('/apartments', 'ApartmentController')
+        Route::resource('apartments', 'ApartmentController')
         ->name('admin', 'apartments');
 }); 
